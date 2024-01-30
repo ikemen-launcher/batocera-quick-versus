@@ -1,0 +1,8 @@
+external/script/main.lua:1500: chars/../../../pending-chars/Guilty Gear/ROBO-KY_MK-II/ROBO-KY_MK-II.def:
+CNS/ROBO-KY_MK-II.cns
+open CNS/ROBO-KY_MK-II.cns: no such file or directory
+stack traceback:
+	[G]: in function 'game'
+	external/script/main.lua:1500: in function 'f_commandLine'
+	external/script/main.lua:1509: in main chunk
+	[G]: ?
