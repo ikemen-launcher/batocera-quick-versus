@@ -9,7 +9,7 @@ lifebarDirectory="../../lifebars"
 stageDirectory="../../../stages"
 characterDirectory="../../../chars"
 
-motif="motif/system.def"
+motif="system.def"
 lifebar="01/fight.def"
 rounds=2
 characterOneColor=1
@@ -60,7 +60,7 @@ for i in "$@"; do
 done
 
 case "$OSTYPE" in
-  darwin*) #echo "It's a Mac!!" ;
+  darwin*)
     ikemen="./Ikemen_GO_MacOS -AppleMagnifiedMode YES"
   ;;
   linux*)
@@ -70,6 +70,16 @@ case "$OSTYPE" in
     ikemen="./Ikemen_GO_Linux"
   ;;
 esac
+
+IS_BATOCERA=false
+if [ -x "$(command -v batocera-resolution)" ] ; then
+  IS_BATOCERA=true
+fi
+
+if [ "$IS_BATOCERA" = true ] ; then
+  ikemen="./Ikemen_GO_Linux"
+  previousResolutionMode=$(batocera-resolution currentMode)
+fi
 
 $ikemen \
   -config "$configPath" \
@@ -82,3 +92,7 @@ $ikemen \
   -p2 "$characterDirectory/$characterTwo" \
   -p2.color $characterTwoColor \
   -p2.ai $characterTwoAI
+
+if [ "$IS_BATOCERA" = true ] ; then
+  batocera-resolution setMode $previousResolutionMode
+fi

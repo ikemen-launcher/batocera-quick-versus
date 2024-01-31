@@ -4,7 +4,7 @@ currentDirectory=$(dirname "$(realpath "$0")")
 cd "$currentDirectory"
 
 case "$OSTYPE" in
-  darwin*) #echo "It's a Mac!!" ;
+  darwin*)
     .engine/quick-versus.app/Contents/MacOS/quick-versus --no-sandbox "$currentDirectory" 
   ;;
   linux*)
