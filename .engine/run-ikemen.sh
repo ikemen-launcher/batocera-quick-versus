@@ -10,7 +10,7 @@ stageDirectory="../../../stages"
 characterDirectory="../../../chars"
 
 motif="system.def"
-lifebar="01/fight.def"
+lifebar="VHD/fight.def"
 rounds=2
 characterOneColor=1
 characterTwoColor=1
