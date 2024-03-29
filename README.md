@@ -2,7 +2,7 @@
 
 ## Install
 
-Download the project and put the directory in the `ports` system.
+Download the project and put the directory in the `ports` system: https://github.com/ikemen-launcher/batocera-quick-versus/releases
 
 After updating the game list, you should be able to see `Ikemen Quick Versus` in `ports` system.
 
