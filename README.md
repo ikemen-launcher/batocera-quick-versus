@@ -1,5 +1,7 @@
 # Ikemen Quick Versus on Batocera
 
+![Video](./video.gif)
+
 ## Install
 
 Download the project and put the directory in the `ports` system: https://github.com/ikemen-launcher/batocera-quick-versus/releases
